@@ -373,7 +373,8 @@ border: none;
   margin-top: 0.5rem;
 }
 .offer-container{
-  margin-top: 2rem;
+  
+  margin: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
