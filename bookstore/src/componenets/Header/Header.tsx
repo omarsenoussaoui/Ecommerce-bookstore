@@ -9,7 +9,7 @@ function Header() {
                             <img src={logo} alt="" />
                         </div>
                         <div className="logo-header">
-                            <h4><a href="index.html">EL Mohamadia</a></h4>
+                            <h4><a href="#">EL Mohamadia</a></h4>
                             <small>Book Shop</small>
                         </div>
                     </div>
@@ -19,17 +19,11 @@ function Header() {
                                 <div className="img">
                                     <img src="images/logo.png" alt="" />
                                 </div>
-                                <div className="logo-header">
-                                    <h4><a href="index.html">Bookoe</a></h4>
-                                    <small>Book Store Website</small>
-                                </div>
                             </div>
-                            <button className="close"><i className="fa-solid fa-xmark"></i></button>
                         </div>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/service.html">Service</a></li>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="Pages/book-filter.html">Catégories</a></li>
                         <li><a href="pages/contact.html">Contact</a></li>
-                        <li><a href="Pages/book-filter.html">Books</a></li>
                         <button className="login"><a href="pages/login.html">Log In</a></button>
                         <div className="nav-end">
                             <button className="cart">
