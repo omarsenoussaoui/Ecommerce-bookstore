@@ -1,10 +1,16 @@
 import book from '../../assets/images/book-1.jpg'
-export default function Books() {
+export default function BookHomeSection() {
     return (
         <>
             <section className="offer">
-                <div className="header">
-                    <h4>Nos Livres</h4>
+                <div className="header" style={{ display: 'ruby-text' }}>
+                    <h4>Nos Livres(10)</h4>
+                    <div className="price">
+                        <a href='/all-books' style={{ color: '#6c5dd4', fontWeight: '700', textDecoration: 'none' }}>
+                            (Tous les livres)
+                        </a>
+                    </div>
+
                 </div>
                 <div className="offer-container">
                     <div className="offer">
@@ -58,6 +64,7 @@ export default function Books() {
                                 laboru
                             </p>
                             <small>Kevin Smiley</small>
+                            
                             <div className="offer-bottom">
                                 <button className="cartbtn">
                                     <i className="fa-solid fa-cart-shopping"></i>Add to cart

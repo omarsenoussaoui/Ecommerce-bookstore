@@ -1,11 +1,29 @@
 import './App.css'
-import Books from './componenets/Books/Books'
+import AllBooks from './componenets/Books/AllBooks';
+import BookHomeSection from './componenets/Books/BookHomeSection'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Hero from './componenets/Hero/Hero';
 
 function App() {
 
   return (
     <>
-      <Books />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <BookHomeSection />
+            </>
+          } />
+          <Route path="/all-books" element={
+            <>
+              <AllBooks />
+            </>
+          } />
+        </Routes>
+      </BrowserRouter>
+
     </>
   )
 }
