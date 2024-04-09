@@ -1,4 +1,4 @@
-import logo from'../../assets/images/logo.png';
+import logo from '../../assets/images/logo.png';
 function Header() {
     return (
         <>
@@ -31,9 +31,11 @@ function Header() {
                         <li><a href="pages/contact.html">Contact</a></li>
                         <li><a href="Pages/book-filter.html">Books</a></li>
                         <button className="login"><a href="pages/login.html">Log In</a></button>
-                        <button className="signup">
-                            <i className="fa-solid fa-user"></i><a href="pages/registration.html">Sign Up</a>
-                        </button>
+                        <div className="nav-end">
+                            <button className="cart">
+                                <a href="cart-item.html"><i className="fa-solid fa-cart-shopping"></i> <span>4</span></a>
+                            </button>
+                        </div>
                     </ul>
                     <div className="hamburger">
                         <div className="line"></div>
