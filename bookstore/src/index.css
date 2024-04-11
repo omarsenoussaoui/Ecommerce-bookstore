@@ -198,7 +198,7 @@ border: none;
 .hero .content .btns button i{
   margin-left: 0.5rem;
 }
-.hero .content .btns button:nth-child(2){
+.hero .content .btns a.allOffers button{
   color: #131428;
   border: 2px solid #e1dfec;
   background-color: transparent;

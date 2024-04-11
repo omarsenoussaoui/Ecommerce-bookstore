@@ -1,8 +1,9 @@
 import './App.css'
-import AllBooks from './componenets/Books/AllBooks';
+import AllBooks from './pages/Books/AllBooks';
 import BookHomeSection from './componenets/Books/BookHomeSection'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Hero from './componenets/Hero/Hero';
+import Offers from './pages/Offres/Offers';
 
 function App() {
 
@@ -21,7 +22,9 @@ function App() {
               <AllBooks />
             </>
           } />
+          <Route path="/offers" element={<Offers />} />
         </Routes>
+        
       </BrowserRouter>
 
     </>

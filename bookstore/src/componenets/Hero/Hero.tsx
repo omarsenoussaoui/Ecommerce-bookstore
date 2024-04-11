@@ -1,4 +1,5 @@
 import studentImage from '../../assets/images/BookOffre.png'
+import { Link } from 'react-router-dom';
 function Hero() {
     return (
         <>
@@ -9,15 +10,19 @@ function Hero() {
                         <h2>Offre Spéciale 50%</h2>
                         <h5>Pour Les Etudiant de Bac</h5>
                         <p>
-                           Sur Les Livres de révsion
+                            Sur Les Livres de révsion
                         </p>
                         <div className="btns">
-                            <button>Obtenez l'offre<i className="fa-solid fa-arrow-right"></i></button>
-                            <button>Voir les autres promotions</button>
+                            <Link to="/offers">
+                                <button>Obtenez l'offre<i className="fa-solid fa-arrow-right"></i></button>
+                            </Link>
+                            <Link to="/offers" className='allOffers'>
+                                <button >Voir les autres promotions</button>
+                            </Link>
                         </div>
                     </div>
                     <div className="img">
-                        <img style={{width : '280px'}}
+                        <img style={{ width: '280px' }}
                             src={studentImage}
                             alt=""
                         />

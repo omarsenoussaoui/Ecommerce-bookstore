@@ -1791,3 +1791,59 @@ table .heading {
         width: 100%;
     }
 }
+
+
+.offer-content .offer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+.offer-bottom .cartbtn{
+    background-color: #6c5dd4;
+    padding: 12px 30px;
+    font-size: 12px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    display: inline-flex;
+}
+.offer-bottom .cartbtn i{
+    margin-right: 0.5rem;
+}
+.offer-bottom .price strong{
+    font-size: 25px;
+    font-weight: 600;
+}
+.offer-bottom .price span{
+    font-size: 18px;
+}
+
+/* For small devices (phones) */
+@media only screen and (max-width: 575.98px) {
+    .offer-bottom .cartbtn p{
+        
+        display: none;
+    }
+  }
+  
+  /* For medium devices (tablets) */
+  @media only screen and (min-width: 576px) and (max-width: 991.98px) {
+    .offer-bottom .cartbtn p{
+        
+        display: none;
+    }
+  }
+  
+  /* For large devices (desktops and laptops) */
+  @media only screen and (min-width: 992px) and (max-width: 1399.98px) {
+    .offer-bottom .cartbtn p{
+        
+        display: none;
+    }
+  }
+  
+  /* For extra-large devices (large desktops) */
+  @media only screen and (min-width: 1400px) {
+    /* CSS styles for extra-large devices go here */
+  }

@@ -1,8 +1,15 @@
 import './AllBooks.css'
+import { useState } from 'react';
+
 import book from '../../assets/images/book-1.jpg'
 import book2 from '../../assets/images/book-2.jpg'
 import book3 from '../../assets/images/book-3.jpg'
 function AllBooks() {
+    const [isActive, setIsActive] = useState(false);
+
+    const toggleFilter = () => {
+        setIsActive(!isActive);
+    };
     return (
         <>
             <div className="breadcrumb-container">
@@ -13,7 +20,7 @@ function AllBooks() {
             </div>
             <section className="filter">
                 <div className="book-grid-container">
-                    <div className="filter-option">
+                    <div className={`filter-option ${isActive ? 'active-div' : ''}`}>
                         <div className="filter-group">
                             <h4>Filter Options</h4>
                             <div className="editor-pick select-box">
@@ -133,7 +140,9 @@ function AllBooks() {
                                 <button>Reset Filter</button>
                             </div>
                         </div>
-                        <i className="fa fa-chevron-right rightbtn"></i>
+                        <i className="fa fa-chevron-right rightbtn" onClick={toggleFilter}>
+
+                        </i>
                     </div>
                     <div className="book-collections">
                         <h4>Books</h4>
@@ -153,29 +162,20 @@ function AllBooks() {
                                     </button>
                                 </div>
                                 <h5>The Giver</h5>
-                                <small
-                                ><a href="">Adventure,</a><a href="">Thriller,</a
-                                ><a href="">Drama</a></small
-                                >
-                                <div className="star-rating">
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
+                                <div className="offer-content">
+                                    <div className="offer-bottom">
+                                        <button className="cartbtn">
+                                            <i className="fa-solid fa-cart-shopping"></i>
+                                            <p>Add to cart</p>
+                                        </button>
+                                        <div className="price">
+                                            <strong style={{ color: '#6c5dd4', fontWeight: '700' }}><span>$</span>18.7</strong>
+                                            <span style={{ fontSize: '12px', textDecoration: 'line-through', color: '#a0a1a6', fontWeight: '500' }}>
+                                                <>$70.00</>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="offer-bottom">
-                                <button className="cartbtn">
-                                    <i className="fa-solid fa-cart-shopping"></i>Add to cart
-                                </button>
-                                <div className="price">
-                                    <strong style={{ color: '#6c5dd4', fontWeight: '700' }}><span>$</span>18.7</strong>
-                                    <span style={{ fontSize: '12px', textDecoration: 'line-through', color: '#a0a1a6', fontWeight: '500' }}>
-                                        <>$70.00</>
-                                    </span>
-                                </div>
-                            </div>
-
                             </div>
                             <div className="book-card">
                                 <div className="img">
