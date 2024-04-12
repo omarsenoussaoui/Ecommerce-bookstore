@@ -6,10 +6,10 @@ function Header() {
                 <nav className="navbar">
                     <div className="logo">
                         <div className="img">
-                            <img src={logo} alt="" />
+                            <a href="/"><img src={logo} alt="" /></a>
                         </div>
                         <div className="logo-header">
-                            <h4><a href="#">EL Mohamadia</a></h4>
+                            <h4><a href="/">EL Mohamadia</a></h4>
                             <small>Book Shop</small>
                         </div>
                     </div>
@@ -21,8 +21,8 @@ function Header() {
                                 </div>
                             </div>
                         </div>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="Pages/book-filter.html">Catégories</a></li>
+                        <li><a href="/">Accueil</a></li>
+                        <li><a href="/all-books">Catégories</a></li>
                         <li><a href="pages/contact.html">Contact</a></li>
                         <button className="login"><a href="pages/login.html">Log In</a></button>
                         <div className="nav-end">

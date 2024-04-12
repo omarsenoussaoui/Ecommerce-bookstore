@@ -14,7 +14,7 @@ function AllBooks() {
         <>
             <div className="breadcrumb-container">
                 <ul className="breadcrumb">
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="#">Books</a></li>
                 </ul>
             </div>
