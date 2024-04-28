@@ -9,9 +9,7 @@ function Hero() {
                         <small>Offre</small>
                         <h2>Offre Spéciale 50%</h2>
                         <h5>Pour Les Etudiant de Bac</h5>
-                        <p>
-                            Sur Les Livres de révsion
-                        </p>
+                       
                         <div className="btns">
                             <Link to="/offers">
                                 <button>Obtenez l'offre<i className="fa-solid fa-arrow-right"></i></button>
