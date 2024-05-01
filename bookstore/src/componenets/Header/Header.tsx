@@ -23,6 +23,7 @@ function Header() {
                         </div>
                         <li><a href="/">Accueil</a></li>
                         <li><a href="/all-books">Catégories</a></li>
+                        <li><a href="/offers">Offres</a></li>
                         <li><a href="pages/contact.html">Contact</a></li>
                         <button className="login"><a href="pages/login.html">Log In</a></button>
                         <div className="nav-end">

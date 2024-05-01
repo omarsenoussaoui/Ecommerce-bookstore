@@ -1,29 +1,71 @@
 import studentImage from '../../assets/images/BookOffre.png'
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getData } from '../../api/ApiService';
+
 function Hero() {
+    const [offer, setOffer] = useState({
+        id: 0,
+        title: '',
+        description: '',
+        isSpecial: false,
+        startDate: new Date(),
+        endDate: new Date(),
+        books: [],
+        imageDataBase64: null
+    });
+
+    const welcomHero = {
+        title: 'Bienvenue',
+        description: 'EL Mohamadia BookShop est à votre service'
+    };
+
+    useEffect(() => {
+        const fetchOffer = async () => {
+            try {
+                const data = await getData('/offers/special'); // adjust the endpoint as needed
+                setOffer(data);
+                console.log(data.imageDataBase64)
+            } catch (error) {
+                console.error('Failed to fetch offer:', error);
+            }
+        };
+
+        fetchOffer();
+    }, []);
+
+
+
     return (
         <>
             <section className="hero">
                 <div className="main">
                     <div className="content">
-                        <small>Offre</small>
-                        <h2>Offre Spéciale 50%</h2>
-                        <h5>Pour Les Etudiant de Bac</h5>
-                       
+                        {offer.isSpecial && (
+                            <small>Offere Spécial</small>
+                        )}
+                        <h2>{offer.title ?? welcomHero.title} </h2>
+                        <h5>{offer.description ?? welcomHero.description}</h5>
                         <div className="btns">
-                            <Link to="/offers">
-                                <button>Obtenez l'offre<i className="fa-solid fa-arrow-right"></i></button>
-                            </Link>
+                            {offer.isSpecial && (
+                                <Link to="/offers">
+                                    <button>Obtenez l'offre<i className="fa-solid fa-arrow-right"></i></button>
+                                </Link>
+                            )}
                             <Link to="/offers" className='allOffers'>
-                                <button >Voir les autres promotions</button>
+                                <button >Voir toutes les promotions</button>
                             </Link>
                         </div>
                     </div>
-                    <div className="img">
+                    {/* <div className="img">
                         <img style={{ width: '280px' }}
                             src={studentImage}
                             alt=""
                         />
+                    </div> */}
+
+                    <div className="img">
+                        <img src={offer.imageDataBase64 ?? studentImage} alt={offer.title} style={{ width: '280px' }} />
                     </div>
                 </div>
                 <div className="square-dot">
