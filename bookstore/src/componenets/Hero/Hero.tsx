@@ -12,7 +12,7 @@ function Hero() {
         startDate: new Date(),
         endDate: new Date(),
         books: [],
-        imageDataBase64: null
+        imageDataToString: null
     });
 
     const welcomHero = {
@@ -65,7 +65,7 @@ function Hero() {
                     </div> */}
 
                     <div className="img">
-                        <img src={offer.imageDataBase64 ?? studentImage} alt={offer.title} style={{ width: '280px' }} />
+                        <img src={offer.imageDataToString ?? studentImage} alt={offer.title} style={{ width: '280px' }} />
                     </div>
                 </div>
                 <div className="square-dot">
