@@ -8,5 +8,8 @@ export interface Offer {
     startDate: Date;
     endDate: Date;
     books: Book[];
+<<<<<<< HEAD
     imageData: string;
+=======
+>>>>>>> 3efc6b92fb6f7d8cd142a77baa24edc36dd7bc2c
   }
