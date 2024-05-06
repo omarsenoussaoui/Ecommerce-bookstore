@@ -450,13 +450,14 @@ border: none;
   font-size: 18px;
 }
 .sale{
-  margin-top: 9rem;
+  width: 350px;
+  /* margin-top: 9rem; */
 }
 .sale .timer{
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 .sale .timer .hours,.sale .timer .minutes,.sale .timer .seconds{
   display: flex;
